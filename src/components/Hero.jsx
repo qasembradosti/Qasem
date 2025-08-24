@@ -27,13 +27,7 @@ const Hero = () => {
             Im Full Stack Developer <br className="sm:block hidden" />
           </p>
 
-          <p className={` mt-4 max-[600px]:text-[14px] text-white-100`}>
-            And im using  <br className="sm:block hidden" />
-          </p>
-          <ul style={{ listStyleType: "revert", margin: 20, marginLeft: 60 }} className="max-[600px]:text-[12px]">
-            <li>React + React Native + Vue</li>
-            <li>Node js + Express js + Laravel</li>
-          </ul>
+        
         </div>
       </div>
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
