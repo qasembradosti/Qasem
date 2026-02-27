@@ -71,7 +71,7 @@ const Hero = () => {
             />
             <div className="mt-4 rounded-xl border border-white/15 bg-white/5 p-4">
               <p className="text-sm uppercase tracking-[0.2em] text-blue-200">Current Role</p>
-              <p className="mt-1 text-lg font-semibold text-white">MERN Stack Developer</p>
+              <p className="mt-1 text-lg font-semibold text-white">Full Stack Developer</p>
             </div>
           </div>
         </motion.div>
