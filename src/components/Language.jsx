@@ -1,40 +1,61 @@
 import React from "react";
-import { languages } from "../constants";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
 
+import { languages } from "../constants";
+import { styles } from "../styles";
+import { fadeIn, staggerContainer, textVariant } from "../utils/motion";
 
-function Language() {
+const Language = () => {
   return (
-    
-    <div>
-      <h1 className="text-center font-bold text-3xl mb-10">Language Skill</h1>
-      <div className="grid place-content-center place-items-center grid-row-3 gap-5 mx-12 py-5 ">
-        {languages.map((language) => (
-      <Tilt key={language.name}>
-          <motion.div
-            variants={fadeIn("right", "spring", 0.5, 0.75)}
-            className="w-80 h-12 green-pink-gradient p-[5px] rounded-[10px]"
+    <motion.section
+      id="languages"
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className={`${styles.padding} relative z-0 mx-auto max-w-7xl`}
+    >
+      <div className="pointer-events-none absolute -left-20 top-12 h-40 w-40 rounded-full bg-blue-500/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-16 bottom-8 h-44 w-44 rounded-full bg-cyan-500/15 blur-3xl" />
+
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Communication</p>
+        <h2 className={styles.sectionHeadText}>Language Skills</h2>
+      </motion.div>
+
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 max-w-3xl text-[16px] leading-[30px] text-[#c7c3dc]"
+      >
+        I communicate across multicultural teams and client environments with clear technical and
+        business-focused communication.
+      </motion.p>
+
+      <div className="mt-10 grid gap-4 md:grid-cols-3">
+        {languages.map((language, index) => (
+          <motion.article
+            key={language.name}
+            variants={fadeIn("up", "spring", index * 0.12, 0.6)}
+            className="group relative overflow-hidden rounded-2xl border border-white/15 bg-[#0f1324]/80 p-5 backdrop-blur"
           >
-            <div
-              options={{
-                max: 45,
-                scale: 0,
-                speed: 45,
-              }}
-              className="bg-white rounded-[10px] p-2 h-[37px] flex justify-evenly items-center flex-col"
-            >
-              <h3 className="text-black text-[16px] font-bold text-center" style={{fontFamily:"serif"}}>
-                {language.name}
-              </h3>
+            <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-blue-500/20 blur-2xl transition group-hover:bg-cyan-400/30" />
+
+            <div className="flex items-center justify-between">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-sm font-semibold text-cyan-100">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+              <span className="rounded-full border border-cyan-300/35 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-cyan-100">
+                Active
+              </span>
             </div>
-          </motion.div>
-        </Tilt>
+
+            <h3 className="mt-5 text-2xl font-bold text-white">{language.name}</h3>
+            <p className="mt-2 text-sm text-[#d3cdea]">Professional communication and teamwork.</p>
+          </motion.article>
         ))}
       </div>
-    </div>
+    </motion.section>
   );
-}
+};
 
 export default Language;

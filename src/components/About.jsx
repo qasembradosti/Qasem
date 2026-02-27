@@ -1,5 +1,4 @@
 import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,89 +6,74 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[240px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[5px] rounded-[20px]"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 20,
-          speed: 45,
-        }}
-        className="bg-white rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
+const focusAreas = [
+  {
+    title: "Full-Stack Delivery",
+    description:
+      "I build complete products from frontend UI to backend APIs, with clean architecture and maintainable code.",
+  },
+  {
+    title: "Performance Mindset",
+    description:
+      "I optimize rendering, API responses, and data access so applications stay fast and reliable as they scale.",
+  },
+  {
+    title: "Business Impact",
+    description:
+      "I focus on features that improve workflows and solve real user problems, not only technical outputs.",
+  },
+];
 
-        <h3 className="text-black text-[20px] font-bold text-center">
-          {title}
-        </h3>
+const ServiceCard = ({ title, icon, index }) => (
+  <motion.article
+    variants={fadeIn("up", "spring", index * 0.12, 0.65)}
+    className="group relative overflow-hidden rounded-3xl border border-white/15 bg-[#0f1324]/80 p-6 backdrop-blur"
+  >
+    <div className="pointer-events-none absolute -right-12 -top-10 h-28 w-28 rounded-full bg-blue-500/20 blur-2xl transition group-hover:bg-cyan-400/30" />
+    <div className="flex items-center gap-4">
+      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/5 p-2">
+        <img src={icon} alt={title} className="h-9 w-9 object-contain" />
       </div>
-    </motion.div>
-  </Tilt>
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+    </div>
+  </motion.article>
 );
 
 const About = () => {
   return (
-    <div className="max-[500px]:mt-[500px]">
+    <div className="relative">
+      <div className="pointer-events-none absolute -left-20 top-10 h-44 w-44 rounded-full bg-cyan-500/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-52 w-52 rounded-full bg-blue-500/15 blur-3xl" />
+
       <motion.div variants={textVariant()}>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>About Me</h2>
       </motion.div>
-      <div>
-        <p className="mt-4 text-white max-[600px]:text-[12px] text-[16px] max-w-3xl leading-[30px]">
-          I’m a software developer with a strong passion for building scalable,
-          user-friendly applications using the MERN stack (MongoDB, Express.js,
-          React, Node.js). I focus on delivering clean, efficient code that not
-          only meets technical requirements but also improves business
-          processes.
-        </p>
-        <p className="mt-4 text-white max-[600px]:text-[12px] text-[16px] max-w-3xl leading-[30px]">
-          <b>Full-Stack Development:</b> I specialize in both frontend and backend
-          development. On the frontend, I use React to build dynamic,
-          interactive user interfaces that are intuitive and responsive. For the
-          backend, I use Node.js and Express.js to build robust, secure RESTful
-          APIs that power modern web applications.
-        </p>
-        <p className="mt-4 text-white max-[600px]:text-[12px] text-[16px] max-w-3xl leading-[30px]">
-        <b>Database Management:</b> I work with MongoDB to design and optimize
-          databases, ensuring fast data access, scalability, and smooth
-          integration with the backend. I also ensure the data model aligns with
-          the app’s needs to improve performance and reliability.
-        </p>
-        <p className="mt-4 text-white max-[600px]:text-[12px] text-[16px] max-w-3xl leading-[30px]">
-        <b>Frontend Technologies:</b> I use React to create reusable components,
-          along with Redux Toolkit for state management. I also apply Tailwind
-          CSS for fast, responsive designs that ensure a seamless user
-          experience across all devices.
-        </p>
-        <p className="mt-4 text-white max-[600px]:text-[12px] text-[16px] max-w-3xl leading-[30px]">
-        <b>Backend Development:</b> I’m proficient in developing APIs with Node.js
-          and Express.js, including handling user authentication, session
-          management, and integrating third-party services. I make sure that the
-          backend communicates smoothly with the frontend while maintaining
-          security and performance.
-        </p>
-        <p className="mt-4 text-white max-[600px]:text-[12px] text-[16px] max-w-3xl leading-[30px]">
-        <b>Problem-Solving & Optimization:</b> I love tackling complex challenges and
-          optimizing applications for speed and efficiency. Whether it’s
-          refactoring code, reducing database queries, or implementing caching
-          strategies, I aim to ensure the best performance for users.
-        </p>
-        <p className="mt-4 text-white max-[600px]:text-[12px] text-[16px] max-w-3xl leading-[30px]">
-          By combining technical expertise with a focus on user experience, I
-          build applications that are not only functional but also enjoyable to
-          use. My goal is always to create solutions that are easy to maintain,
-          scalable, and aligned with the needs of the business.
-        </p>
+
+      <motion.p
+        variants={fadeIn("", "", 0.12, 1)}
+        className="mt-4 max-w-4xl text-[16px] leading-[30px] text-[#c7c3dc]"
+      >
+        I am a full-stack developer focused on the MERN ecosystem, with hands-on experience in
+        building responsive interfaces, secure APIs, and scalable data-driven applications. My
+        work combines clean engineering with practical product thinking to deliver software that is
+        easy to maintain and useful for real users.
+      </motion.p>
+
+      <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        {focusAreas.map((item, index) => (
+          <motion.article
+            key={item.title}
+            variants={fadeIn("up", "spring", index * 0.12, 0.7)}
+            className="rounded-2xl border border-white/15 bg-black/35 p-5 backdrop-blur"
+          >
+            <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+            <p className="mt-3 text-sm leading-7 text-[#d0cbe6]">{item.description}</p>
+          </motion.article>
+        ))}
       </div>
 
-      <div className="mt-20 flex flex-wrap items-center justify-center gap-10">
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

@@ -6,7 +6,8 @@ import {
   html,
   css,
   reactjs,
-  laravel,
+  fastapi,
+  python,
   redux,
   tailwind,
   nodejs,
@@ -24,13 +25,9 @@ import {
   firebase,
   github,
   sqlserver,
-  render,
-  restapi,
   aws,
   googlecloud,
-  rapid,
   npm,
-  postman,
   expo,
   bootstrap,
   jwt,
@@ -79,6 +76,14 @@ const services = [
 
 const technologies = [
   {
+    name: "Fast API",
+    icon: fastapi,
+  },
+  {
+    name:"python" ,
+    icon:python
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
@@ -105,10 +110,6 @@ const technologies = [
   {
     name: "Vue JS",
     icon: vue,
-  },
-  {
-    name: "Laravel",
-    icon: laravel,
   },
   {
     name: "Redux",
@@ -148,10 +149,6 @@ const technologies = [
     icon: googlecloud,
   },
   {
-    name: "Render",
-    icon: render,
-  },
-  {
     name: "C++",
     icon: cpp,
   },
@@ -187,19 +184,6 @@ const technologies = [
   {
     name: "SQL Server",
     icon: sqlserver,
-  },
-
-  {
-    name: "Rest API",
-    icon: restapi,
-  },
-  {
-    name: "Rapid API",
-    icon: rapid,
-  },
-  {
-    name: "Postman",
-    icon: postman,
   },
   {
     name: "Figma",
@@ -272,26 +256,6 @@ const experiences = [
       "Security: Enforced IT policies, and ensured data protection.",
       "By combining financial expertise with IT management, I enhanced operational efficiency, data security, and technology-driven financial processes, supporting the company’s growth and stability.",
     ],
-  },
-  {
-    title: "Full Stack Developer",
-    company_name: "TS Software Team",
-    iconBg: "#0070ff",
-    date: "March 2024 - Aug 2024",
-    points: [
-      "As an Intermediate Full Stack Developer at Tecno Speed Software, I contributed to building web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
-      "Front-End: Built responsive interfaces with React.js and Tailwind CSS to enhance user experience.",
-      "Back-End: Developed simple APIs using Node.js and Express.js for handling core app features.",
-      "Database: Created and managed MongoDB collections with a focus on basic data operations.",
-      "Key Responsibilities:",
-      "Developing and connecting front-end and back-end components.",
-      "Basic API development and integration.",
-      "Using Git/GitHub for source control and teamwork.",
-      "Implementing simple authentication using JWT.",
-      "Collaborating with the team to improve functionality and fix bugs.",
-      "I supported the development team by delivering clean, functional features while improving my full stack skills in real-world projects.",
-    ],
-
   },
   {
     title: "IT Technician",
