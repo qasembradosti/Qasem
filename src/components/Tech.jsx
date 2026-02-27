@@ -77,7 +77,7 @@ const Tech = () => {
   }, [activeCategory, categorizedTech]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute -left-16 top-16 h-48 w-48 rounded-full bg-cyan-500/15 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-8 h-48 w-48 rounded-full bg-blue-500/15 blur-3xl" />
 

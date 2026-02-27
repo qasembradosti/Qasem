@@ -4,7 +4,7 @@ import { About,Language, Contact, Experience, Hero, Navbar, Tech } from "./compo
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-black select-none">
+      <div className="relative z-0 overflow-x-hidden bg-black select-none">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />

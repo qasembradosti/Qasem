@@ -13,7 +13,7 @@ const Language = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className={`${styles.padding} relative z-0 mx-auto max-w-7xl`}
+      className={`${styles.padding} relative z-0 mx-auto max-w-7xl overflow-hidden`}
     >
       <div className="pointer-events-none absolute -left-20 top-12 h-40 w-40 rounded-full bg-blue-500/15 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-8 h-44 w-44 rounded-full bg-cyan-500/15 blur-3xl" />

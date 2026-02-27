@@ -41,7 +41,7 @@ const ServiceCard = ({ title, icon, index }) => (
 
 const About = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute -left-20 top-10 h-44 w-44 rounded-full bg-cyan-500/15 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-0 h-52 w-52 rounded-full bg-blue-500/15 blur-3xl" />
 
