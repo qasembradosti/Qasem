@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
+import Projects from "./Projects";
 import Contact from "./Contact";
 import Language  from "./Language";
 
@@ -14,6 +15,7 @@ export {
   About,
   Tech,
   Experience,
+  Projects,
   Contact,
   Language
 };

@@ -46,6 +46,10 @@ export const navLinks = [
     title: "Experience",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "skills",
     title: "Computer Skill",
   },
@@ -76,12 +80,12 @@ const services = [
 
 const technologies = [
   {
-    name: "Fast API",
-    icon: fastapi,
+    name: "python",
+    icon: python
   },
   {
-    name:"python" ,
-    icon:python
+    name: "Fast API",
+    icon: fastapi,
   },
   {
     name: "Node JS",
@@ -291,4 +295,43 @@ const experiences = [
   },
 ];
 
-export { services, technologies, experiences, languages };
+const projects = [
+  {
+    name: "CityGuard Security System",
+    category: "Security Platform",
+    summary:
+      "A smart security platform with LPR and face recognition, optimized live view performance, GPS tracking, and bodycam configuration tools.",
+    highlights: [
+      "License Plate Recognition (LPR) and face recognition workflows.",
+      "Best live-view streaming performance powered by FFmpeg.",
+      "GPS tracker monitoring and bodycam device configuration.",
+    ],
+    stack: ["Vue.js", "FastAPI", "FFmpeg"],
+  },
+  {
+    name: "Aman Store Ecommerce",
+    category: "Mobile Ecommerce App",
+    summary:
+      "A mobile ecommerce app for browsing products, placing orders, and managing customer shopping flows.",
+    highlights: [
+      "Mobile-first catalog with category filtering and product detail pages.",
+      "Shopping cart, checkout flow, and order history on mobile.",
+      "Business-side order and stock management integration.",
+    ],
+    stack: ["React Native", "Expo", "Node.js", "MongoDB"],
+  },
+  {
+    name: "Registration Management System for College",
+    category: "Education System",
+    summary:
+      "A student registration and administration platform to organize course enrollment, academic records, and department workflows.",
+    highlights: [
+      "Student profile and semester registration management.",
+      "Course selection and department-level approval flow.",
+      "Centralized records for registrations and academic reporting.",
+    ],
+    stack: ["React", "FastAPI", "SQL", "JWT"],
+  },
+];
+
+export { services, technologies, experiences, languages, projects };

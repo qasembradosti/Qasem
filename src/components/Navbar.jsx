@@ -34,14 +34,14 @@ const Navbar = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-30 w-full overflow-x-clip px-2 transition-all duration-300 sm:px-6 ${
-        scrolled ? "py-3" : "py-5"
+        scrolled ? "py-2.5" : "py-4"
       }`}
     >
       <nav
         className={`mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between overflow-hidden rounded-2xl border px-2.5 py-2.5 sm:px-5 sm:py-3 ${
           scrolled
-            ? "border-white/15 bg-black/60 shadow-[0_16px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl"
-            : "border-white/10 bg-black/25 backdrop-blur-md"
+            ? "border-white/15 bg-black/65 shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur-lg"
+            : "border-white/10 bg-black/35 backdrop-blur-md"
         }`}
       >
         <a
@@ -52,14 +52,14 @@ const Navbar = () => {
           }}
           className="group flex min-w-0 items-center gap-2 pr-1.5 sm:pr-2"
         >
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-cyan-300/60 bg-cyan-400/15 text-xs font-extrabold text-cyan-100 sm:h-10 sm:w-10 sm:text-sm">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-cyan-300/50 bg-cyan-400/10 text-xs font-bold text-cyan-100 sm:h-10 sm:w-10 sm:text-sm">
             QN
           </span>
           <div className="min-w-0 leading-tight max-[370px]:hidden">
             <p className="truncate text-sm font-semibold text-white">
               Qasem Najm
             </p>
-            <p className="hidden text-[11px] uppercase tracking-[0.14em] text-cyan-200/90 min-[430px]:block">
+            <p className="hidden text-[11px] uppercase tracking-[0.14em] text-cyan-200/80 min-[430px]:block">
               Full Stack Dev
             </p>
           </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={() => setActive("contact")}
-            className="inline-flex rounded-xl border border-cyan-300 bg-cyan-500/20 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/30"
+            className="inline-flex rounded-xl border border-cyan-300/70 bg-cyan-500/15 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/25"
           >
             Hire Me
           </a>
@@ -96,7 +96,7 @@ const Navbar = () => {
         <button
           type="button"
           onClick={() => setToggle((prev) => !prev)}
-          className="inline-flex shrink-0 rounded-xl border border-white/20 bg-white/5 p-1.5 sm:p-2 lg:hidden"
+          className="inline-flex shrink-0 rounded-xl border border-white/20 bg-white/5 p-1.5 transition hover:bg-white/10 sm:p-2 lg:hidden"
           aria-label="Toggle navigation menu"
         >
           <img src={toggle ? close : menu} alt="menu" className="h-5 w-5 object-contain sm:h-6 sm:w-6" />
@@ -132,6 +132,16 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            <a
+              href="#contact"
+              onClick={() => {
+                setActive("contact");
+                setToggle(false);
+              }}
+              className="mt-3 block rounded-xl border border-cyan-300/70 bg-cyan-500/15 px-4 py-3 text-center text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/25"
+            >
+              Hire Me
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

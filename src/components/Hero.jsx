@@ -67,9 +67,9 @@ const Hero = () => {
             <img
               src={require("../assets/Qasem.jpg")}
               alt="Qasem Najm"
-              className="h-[420px] w-full rounded-[1.4rem] object-cover object-top"
+              className="h-[420px] w-full rounded-2xl object-cover object-top"
             />
-            <div className="mt-4 rounded-xl border border-white/15 bg-white/5 p-4">
+            <div className="mt-4 rounded-2xl border border-white/15 bg-white/5 p-4">
               <p className="text-sm uppercase tracking-[0.2em] text-blue-200">Current Role</p>
               <p className="mt-1 text-lg font-semibold text-white">Full Stack Developer</p>
             </div>

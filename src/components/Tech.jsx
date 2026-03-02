@@ -118,12 +118,12 @@ const Tech = () => {
             initial={{ opacity: 0, y: 16, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.28, delay: index * 0.03, ease: "easeOut" }}
-            className="group relative overflow-hidden rounded-2xl border border-white/15 bg-[#0f1324]/80 px-4 py-5 backdrop-blur"
+            className="group relative overflow-hidden rounded-3xl border border-white/15 bg-[#0f1324]/80 px-4 py-5 backdrop-blur"
           >
-            <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-blue-500/20 blur-2xl transition group-hover:bg-cyan-400/30" />
+            <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-blue-400/20 blur-2xl transition group-hover:bg-cyan-400/30" />
 
             <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl border border-white/15 bg-white/5 p-2">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/15 bg-white p-2">
                 <img
                   src={technology.icon}
                   alt={technology.name}

@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { About,Language, Contact, Experience, Hero, Navbar, Tech } from "./components";
+import { About, Language, Contact, Experience, Hero, Navbar, Projects, Tech } from "./components";
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
         <div>
           <About />
           <Experience />
+          <Projects />
         </div>
 
         <div id="skills"  className="flex flex-col gap-6">
