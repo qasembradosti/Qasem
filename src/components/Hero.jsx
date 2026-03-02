@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { styles } from "../styles";const stack = ["React", "Node.js", "Tailwind v4", "MongoDB"];
-
+import { styles } from "../styles";
+import ProfileImage from '../assets/Qasem.jpg'
+const stack = ["React", "Node.js", "Tailwind v4", "MongoDB"];
 const Hero = () => {
   return (
     <section className="relative mx-auto flex min-h-screen w-full items-center overflow-hidden pb-20 pt-28 sm:pt-32">
@@ -65,7 +66,7 @@ const Hero = () => {
           <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-blue-600/40 via-cyan-500/20 to-transparent blur-2xl" />
           <div className="relative rounded-[2rem] border border-white/20 bg-black/55 p-5 backdrop-blur-sm">
             <img
-              src={require("../assets/Qasem.jpg")}
+              src={ProfileImage}
               alt="Qasem Najm"
               className="h-[420px] w-full rounded-2xl object-cover object-top"
             />
