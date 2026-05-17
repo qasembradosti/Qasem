@@ -42,6 +42,10 @@ export const navLinks = [
     title: "About me",
   },
   {
+    id: "education",
+    title: "Education",
+  },
+  {
     id: "work",
     title: "Experience",
   },
@@ -227,6 +231,22 @@ const languages = [
   },
 ];
 
+const education = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    school: "Salahaddin University-Erbil",
+    date: "2021-2022 to 2025-2026",
+    summary:
+      "Graduated from the Computer Science program with a strong academic foundation in software development, problem solving, and modern computing concepts.",
+    details: [
+      "Built core knowledge in programming, data structures, algorithms, database systems, operating systems, and computer networks.",
+      "Completed practical coursework and academic projects focused on web development, software design, and system analysis.",
+      "Strengthened technical thinking through problem solving, debugging, documentation, and collaborative project work.",
+      "Developed the ability to translate academic concepts into real-world development tasks and structured software solutions.",
+    ],
+  },
+];
+
 const experiences = [
   {
     title: "Full Stack Developer",
@@ -334,4 +354,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, languages, projects };
+export { services, technologies, education, experiences, languages, projects };

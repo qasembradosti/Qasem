@@ -65,11 +65,11 @@ const Contact = () => {
 
         <div className="mt-7 space-y-4">
           <a
-            href="tel:+9647508935988"
+            href="tel:+9647507265615"
             className="block min-w-0 overflow-hidden rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white transition hover:border-cyan-300/60"
           >
             <span className="block text-xs uppercase tracking-[0.14em] text-cyan-200">Phone</span>
-            <span className="mt-1 block break-words font-semibold">+964 750 893 5988</span>
+            <span className="mt-1 block break-words font-semibold">+964 750 726 5615</span>
           </a>
           <a
             href="mailto:qasem.najim@gmail.com"

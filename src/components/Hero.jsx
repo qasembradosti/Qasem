@@ -63,6 +63,15 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="relative mx-auto w-full max-w-sm"
         >
+          <div className="absolute -left-4 top-6 z-10 rounded-2xl border border-cyan-300/40 bg-[#06101f]/90 px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur-md sm:-left-8">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-200">
+              Experience
+            </p>
+            <p className="mt-1 text-sm font-bold text-white sm:text-base">
+              More than 3 Years Experience
+            </p>
+          </div>
+
           <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-blue-600/40 via-cyan-500/20 to-transparent blur-2xl" />
           <div className="relative rounded-[2rem] border border-white/20 bg-black/55 p-5 backdrop-blur-sm">
             <img
@@ -85,7 +94,6 @@ const Hero = () => {
               animate={{ y: [0, 24, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
               className="mb-1 h-3 w-3 rounded-full bg-secondary"
-me="w-3 h-3 rounded-full bg-secondary mb-1"
             />
           </div>
         </a>
