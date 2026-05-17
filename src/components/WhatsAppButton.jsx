@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_LINK = "https://wa.me/9647508935988";
+const WHATSAPP_LINK = "https://wa.me/9647507265615";
 
 const WhatsAppIcon = () => (
   <svg
